@@ -1,8 +1,6 @@
 const OfertaPage = () => {
     return (
-        <div>
-         oferta page
-        </div>
+       <div></div>
     );
 };
 

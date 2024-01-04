@@ -8,7 +8,7 @@ import {usePathname} from "next/navigation";
 const Topbar = () => {
 
     return (
-        <div className="hidden lg:flex bg-primary w-full gap-8 text-secondary justify-center h-8 items-center">
+        <div className="flex bg-primary w-full gap-8 text-secondary justify-center h-8 items-center z-10">
             <div className="flex gap-1.5 items-end">
                 <Image width={20} height={20} src={clock} alt="Ikona zegara"/>
                 <span className="-mb-1">Pon. - Pt. 6:30 - 17:00</span>
