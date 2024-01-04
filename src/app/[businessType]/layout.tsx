@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-      <html lang="pl">
+      <html style={{background: "#F8F2E3"}} lang="pl">
       <body className={kalam.className}>
       <main>
           <Topbar/>
