@@ -48,7 +48,7 @@ const Navbar = () => {
                  <Image width={90} height={90} src={logo} alt="Logo"/>
              </NavbarBrand>
          </NavbarContent>
-         <NavbarContent className="hidden sm:flex" justify="end">
+         <NavbarContent className="hidden lg:flex" justify="end">
              {
                  items.map(item=>{
                      return <NavbarItem key={item.href}>
@@ -60,7 +60,7 @@ const Navbar = () => {
              }
          <ToggleBusinessButtons/>
          </NavbarContent>
-         <NavbarMenuToggle className="sm:hidden"/>
+         <NavbarMenuToggle className="lg:hidden"/>
          <NavbarMenu className="text-center">
              {
                  items.map(item=>{
