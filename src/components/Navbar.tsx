@@ -1,5 +1,6 @@
 'use client'
 import {
+    ButtonGroup,
     Navbar as NavbarComponent,
     NavbarBrand,
     NavbarContent,
@@ -13,6 +14,7 @@ import Link from "next/link";
 import {usePathname} from "next/navigation";
 import Image from "next/image";
 import {replaceWord} from "@/lib/replaceWord";
+import {useState} from "react";
 
 const items = [
     {
@@ -40,9 +42,10 @@ const items = [
 const Navbar = () => {
     const pathname = usePathname()
     const pathnamePrefix = pathname.includes("zlobek") ? "/zlobek" : "/przedszkole"
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-     <NavbarComponent height="110px" maxWidth="2xl">
+     <NavbarComponent onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} height="110px" maxWidth="2xl">
          <NavbarContent>
              <NavbarBrand>
                  <Image width={90} height={90} src={logo} alt="Logo"/>
@@ -52,13 +55,15 @@ const Navbar = () => {
              {
                  items.map(item=>{
                      return <NavbarItem key={item.href}>
-                         <Link className="text-xl text-primary font-semibold hover:text-primary/80" href={pathnamePrefix + item.href}>
+                         <Link
+                             onClick={()=>setIsMenuOpen(false)}
+                             className="text-xl text-primary font-semibold hover:text-primary/80" href={pathnamePrefix + item.href}>
                              {item.label}
                          </Link>
                      </NavbarItem>
                  })
              }
-         <ToggleBusinessButtons/>
+         <ToggleBusinessButtons closeMenu={()=>setIsMenuOpen(false)}/>
          </NavbarContent>
          <NavbarMenuToggle className="lg:hidden"/>
          <NavbarMenu className="text-center">
@@ -72,7 +77,7 @@ const Navbar = () => {
                  })
              }
              <NavbarMenuItem>
-                 <ToggleBusinessButtons/>
+                 <ToggleBusinessButtons closeMenu={()=>setIsMenuOpen(false)}/>
              </NavbarMenuItem>
          </NavbarMenu>
      </NavbarComponent>
@@ -82,29 +87,22 @@ const Navbar = () => {
 export default Navbar;
 
 
-const ToggleBusinessButtons = () => {
+const ToggleBusinessButtons = ({closeMenu}:{closeMenu:()=>void}) => {
     const pathname = usePathname()
-    const activeBtnClasses = `btn shadow-2xl btn-primary join-item text-accent`
-    const inactiveBtnClasses = 'btn btn-primary bg-primary/80 scale-90 join-item text-accent font-light'
+    const active = `shadow-2xl`
+    const inactive = 'bg-primary/80 scale-90'
     const businessType = pathname.includes("zlobek") ? "zlobek" : "przedszkole"
 
-    return <div
-        className="join"
-    >
+    return <ButtonGroup>
         <Link
-            href={replaceWord(pathname, "przedszkole", "zlobek")}
-            style={businessType === "zlobek" ? {boxShadow: "4px 4px 16px -2px rgba(0, 0, 0, 0.35)"} : {}}
-            className={businessType === "zlobek" ? activeBtnClasses : inactiveBtnClasses}
-        >
-            Żłobek
+            className={`btn text-lg rounded-r-none btn-primary text-accent ${businessType === "zlobek" ? active : inactive}`}
+            href={replaceWord(pathname, "przedszkole", "zlobek")}>
+           Żłobek
         </Link>
         <Link
-            href={replaceWord(pathname, "zlobek", "przedszkole")}
-            style={businessType === "przedszkole" ? {boxShadow: "4px 4px 16px -2px rgba(0, 0, 0, 0.35)"} : {}}
-            className={businessType === "przedszkole" ? activeBtnClasses : inactiveBtnClasses}
-        >
-            Przedszkole
+            className={`btn text-lg rounded-l-none btn-primary text-accent ${businessType === "przedszkole" ? active : inactive}`}
+            href={replaceWord(pathname, "zlobek", "przedszkole")}>
+           Przedszkole
         </Link>
-
-    </div>
+    </ButtonGroup>
 }

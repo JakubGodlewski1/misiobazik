@@ -4,7 +4,7 @@ import EmployeeCart from "@/app/[businessType]/kadra/EmployeeCart";
 const EmployeesContainer = ({businessType}:{businessType: "zlobek" | "przedszkole"}) => {
 
     return (
-        <div className="flex flex-col gap-16 mt-16">
+        <div className="flex flex-col gap-16 mt-16 mx-auto">
 
             {/*ZAMOYSIEGO NURSERY*/}
             {

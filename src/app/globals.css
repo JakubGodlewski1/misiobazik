@@ -4,9 +4,9 @@
 
 @layer base{
 
-    section{
-        @apply px-5 py-14 mx-auto
-    }
+    /*section{*/
+    /*    @apply px-5 py-14 mx-auto*/
+    /*}*/
 
     main{
         @apply text-[black]

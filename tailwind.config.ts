@@ -10,7 +10,7 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      "xsm": "320px",
+      "xsm": "380px",
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 

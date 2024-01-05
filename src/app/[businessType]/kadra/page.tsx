@@ -3,17 +3,17 @@ import EmployeesContainer from "@/app/[businessType]/kadra/EmployeesContainer";
 
 const KadraPage = ({params:{businessType}}:{params:{businessType: "zlobek" | "przedszkole"}}) => {
     return (
-        <main className="text-[#000 pt-0">
+        <>
             <section className="bg-secondary-content pt-12">
                 <h1 className="heading">Nasza kadra</h1>
                 <div className="pb-8">
                     <KadraDescription businessType={businessType}/>
                 </div>
             </section>
-            <section className="max-w-screen-2xl">
+            <section className="px-12">
                 <EmployeesContainer businessType={businessType}/>
             </section>
-        </main>
+        </>
     );
 };
 
