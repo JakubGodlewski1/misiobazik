@@ -43,7 +43,7 @@ const OpenMainModalBtn = ({businessType}:{businessType:"zlobek" | "przedszkole"}
             </button>
 
             {/*dialog*/}
-            <dialog className="rounded-lg" ref={dialogRef}>
+            <dialog className="rounded-lg overflow-y-scroll overflow-x-hidden" ref={dialogRef}>
                 <div className="w-[1100px] max-w-[90vw] h-[600px] max-h-[90vh] flex">
                     <div className="min-w-[65%] flex flex-col">
                         <div className="p-4">
