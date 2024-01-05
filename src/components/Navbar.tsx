@@ -66,11 +66,13 @@ const Navbar = () => {
          <ToggleBusinessButtons closeMenu={()=>setIsMenuOpen(false)}/>
          </NavbarContent>
          <NavbarMenuToggle className="lg:hidden"/>
-         <NavbarMenu className="text-center">
+         <NavbarMenu>
              {
                  items.map(item=>{
                      return <NavbarMenuItem key={item.label}>
-                         <Link className="text-primary text-2xl font-semibold hover:text-primary/80" href={pathnamePrefix + item.href}>
+                         <Link
+                             onClick={()=>setIsMenuOpen(false)}
+                             className="text-primary text-2xl font-semibold hover:text-primary/80" href={pathnamePrefix + item.href}>
                              {item.label}
                          </Link>
                      </NavbarMenuItem>
@@ -95,11 +97,13 @@ const ToggleBusinessButtons = ({closeMenu}:{closeMenu:()=>void}) => {
 
     return <ButtonGroup>
         <Link
+            onClick={closeMenu}
             className={`btn text-lg rounded-r-none btn-primary text-accent ${businessType === "zlobek" ? active : inactive}`}
             href={replaceWord(pathname, "przedszkole", "zlobek")}>
            Żłobek
         </Link>
         <Link
+            onClick={closeMenu}
             className={`btn text-lg rounded-l-none btn-primary text-accent ${businessType === "przedszkole" ? active : inactive}`}
             href={replaceWord(pathname, "zlobek", "przedszkole")}>
            Przedszkole

@@ -6,10 +6,9 @@ import Image from "next/image";
 import {usePathname} from "next/navigation";
 
 const Topbar = () => {
-
     return (
-        <div className="flex bg-primary w-full gap-8 text-secondary justify-center h-8 items-center z-10">
-            <div className="gap-1.5 items-end hidden sm:flex">
+        <div className="hidden lg:flex bg-primary w-full gap-8 text-secondary justify-center h-8 items-center z-10">
+            <div className="gap-1.5 items-end flex">
                 <Image width={20} height={20} src={clock} alt="Ikona zegara"/>
                 <span className="-mb-1">Pon. - Pt. 6:30 - 17:00</span>
             </div>
@@ -17,7 +16,7 @@ const Topbar = () => {
                 <Image width={20} height={20} src={phone} alt="Ikona telefonu"/>
                 <span className="-mb-1">661 400 422</span>
             </div>
-            <div className="xsm:flex hidden gap-1.5 items-end">
+            <div className="flex gap-1.5 items-end">
                 <Image width={20} height={20} src={mail} alt="Ikona mail"/>
                 <Email/>
             </div>
