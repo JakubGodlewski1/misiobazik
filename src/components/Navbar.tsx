@@ -61,7 +61,9 @@ const Navbar = () => {
      <NavbarComponent onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} height="110px" maxWidth="2xl">
          <NavbarContent>
              <NavbarBrand>
-                 <Image width={90} height={90} src={logo} alt="Logo"/>
+                 <Link href={pathnamePrefix}>
+                     <Image width={90} height={90} src={logo} alt="Logo"/>
+                 </Link>
              </NavbarBrand>
          </NavbarContent>
          <NavbarContent className="gap-8 hidden lg:flex" justify="end">

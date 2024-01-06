@@ -56,7 +56,7 @@ const config: Config = {
         },
       },
     }),
-
+    require('@tailwindcss/typography'),
   ],
   daisyui: {
     themes: [

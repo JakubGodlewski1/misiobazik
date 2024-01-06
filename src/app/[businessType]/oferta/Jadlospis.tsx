@@ -4,7 +4,6 @@ type Links = {
     "Menu śniadaniowe bezbiałkowe bezglutenowe":string,
     "Menu obiadowe bezbiałkowe bezglutenowe":string,
     "Menu obiadowe wegeteriańskie": string
-    Catering:string
 }
 
 const links:Links = {
@@ -13,20 +12,19 @@ const links:Links = {
     "Menu śniadaniowe bezbiałkowe bezglutenowe":"https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/files%2F02.01-31.01%20-%20MENU%20SNIADANIOWE%20DIETA%20BEZBIA%C5%81KOWA%20DIETA%20BEZGLUTENOWA.pdf?alt=media&token=1baf0821-4643-43ab-be45-c9ab2077986d",
     "Menu obiadowe bezbiałkowe bezglutenowe":"https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/files%2FMENU%20OBIADOWE%20%2002.01-31.01%20%20DIETA%20BEZBIA%C5%81KOWA%20DIETA%20BEZGLUTENOWA.pdf?alt=media&token=b6d6cf49-5d04-4b67-91fa-effd812b9c71",
     "Menu obiadowe wegeteriańskie":"https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/files%2FMENU%20OBIADOWE%20-%2002.01-31.01%20DIETA%20WEGETARIAN%CC%81SKA.pdf?alt=media&token=23d792a5-11e6-4e48-8491-9d82e1c496e8",
-    Catering:"https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/files%2FInfo%20o%20cateringu.pdf?alt=media&token=5f4f829b-cf67-43b8-908a-f6b4004af79f"
 }
 
 const Jadlospis = () => {
     return (
         <section className="mb-8">
             <div className="max-w-screen-2xl mx-auto">
-                <h1 className="heading">Jadłospis</h1>
-                <div className="flex flex-col items-center max-w-[600px] mx-auto gap-4">
+                <h1>Jadłospis</h1>
+                <div className="flex flex-col items-center max-w-[600px] mx-auto gap-3">
                     {
                         Object.keys(links).map((menu, i) => {
                             return (
                                 <div key={menu}>
-                                    {i === 2 && <h2 style={{marginBottom: 0, marginTop: 24}}>Dieta</h2>}
+                                    {i === 2 && <h2 style={{marginBottom: 0, marginTop: 12}}>Dieta</h2>}
                                     {menu === "Catering" &&
                                         <h2 style={{marginBottom: 0, marginTop: 24}}
                                             className="subheading">Catering</h2>}

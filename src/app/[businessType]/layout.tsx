@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
       <html style={{background: "#F8F2E3"}} lang="pl">
       <body className={kalam.className}>
+      <div id="read-more-modal"></div>
           <Providers>
               <Topbar/>
               <Navbar/>

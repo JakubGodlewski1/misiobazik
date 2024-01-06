@@ -10,7 +10,7 @@ const KadraPage = ({params:{businessType}}:{params:{businessType: "zlobek" | "pr
                     <KadraDescription businessType={businessType}/>
                 </div>
             </section>
-            <section className="px-12">
+            <section className="px-12 pb-16">
                 <EmployeesContainer businessType={businessType}/>
             </section>
         </>

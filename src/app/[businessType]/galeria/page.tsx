@@ -4,7 +4,6 @@ import {ChangeEvent, useCallback, useEffect, useState} from "react";
 import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
 import {galleryZamoyskiego, galleryWyspianskiego, galleryKindergarten} from "@/data/galleryLinks";
 import Image from "next/image";
-import {Select, SelectItem} from "@nextui-org/react";
 
 const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "przedszkole"}}) => {
     const [emblaRef, emblaApi] = useEmblaCarousel()
@@ -31,31 +30,16 @@ const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "p
         if (emblaApi) emblaApi.scrollNext()
     }, [emblaApi])
 
-
-
     return (
         <section>
             {
                 businessType === "zlobek" &&
-                <Select
-                    label="Wybierz żłobek"
-                    size="md"
-                    onChange={(e:ChangeEvent<HTMLSelectElement>)=>setNurseryLocation(e.target.value as "wyspianskiego" | "zamoyskiego")}
-                    defaultSelectedKeys={[nurseryLocation]}
-                    className="w-96 mx-auto block mt-2 px-4"
-                    color="primary">
-                    <SelectItem
-                        value="Zamoyskiego"
-                        key="zamoyskiego">
-                        Zamoyskiego
-                    </SelectItem>
-                       <SelectItem
-                           value="Wyspiańskiego"
-                           key="wyspianskiego"
-                       >
-                        Wyspiańskiego
-                    </SelectItem>
-                </Select>
+                <select
+                    onChange={(e)=>setNurseryLocation(e.target.value as "zamoyskiego" | "wyspianskiego")}
+                    className="select select-md shadow-xl w-full max-w-xs mx-auto block text-lg mt-4 bg-secondary-content text-black">
+                    <option value="zamoyskiego">Zamoyskiego</option>
+                    <option value="wyspianskiego">Wyspiańskiego</option>
+                </select>
             }
             <div className="flex items-center px-2 rounded-lg justify-center mt-4">
                 <button className="hidden sm:block rounded-full bg-secondary-content p-2" onClick={scrollPrev}>
