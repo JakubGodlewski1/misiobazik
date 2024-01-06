@@ -11,22 +11,30 @@ const OfertaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "pr
     const classes = businessType === "zlobek" ? zajeciaNursery : zajeciaKindergarten
 
     return (
-        <>
-            <section className="max-w-screen-xl mx-auto px-4 mt-12">
+        <div className="flex flex-col gap-12">
+            <section className="max-w-screen-xl w-screen sm:w-[80vw] px-4 mt-12 mx-auto">
                 <h1 className="">Zajęcia</h1>
                 <Accordion className="[&>*>*>ul]:ml-10">
                     {
-                        classes.map(el=>{
-                            return <AccordionItem  key={el.title} title={el.title} aria-label={el.title}>
-                                    {el.content && parse(el.content)}
+                        classes.map(el => {
+                            return <AccordionItem key={el.title} title={el.title} aria-label={el.title}>
+                                {el.content && parse(el.content)}
                             </AccordionItem>
                         })
                     }
                 </Accordion>
             </section>
             <Jadlospis/>
-            <PlanDniaCarousel heading="Starsza grupa" planTygodnia={planTygodniaStarszaGrupa}/>
-        </>
+            <div>
+                <h1>Plan dnia</h1>
+                <select
+                    className="select select-lg select-bordered w-full max-w-xs mx-auto block text-xl bg-primary text-white">
+                    <option>Młodsza grupa</option>
+                    <option>Starsza grupa</option>
+                </select>
+                <PlanDniaCarousel planTygodnia={planTygodniaStarszaGrupa}/>
+            </div>
+        </div>
     );
 };
 

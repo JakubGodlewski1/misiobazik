@@ -10,7 +10,7 @@ type PlanTygodnia = {
     accentColor: "primary" | "secondary"
 }[]
 
-const PlanDniaCarousel = ({planTygodnia, heading}:{planTygodnia:PlanTygodnia, heading:string}) => {
+const PlanDniaCarousel = ({planTygodnia}:{planTygodnia:PlanTygodnia}) => {
     const [emblaRef, emblaApi] = useEmblaCarousel()
 
     const scrollPrev = useCallback(() => {
@@ -22,8 +22,7 @@ const PlanDniaCarousel = ({planTygodnia, heading}:{planTygodnia:PlanTygodnia, he
     }, [emblaApi])
 
     return (
-        <>
-            <h1>Plan dnia - {heading}</h1>
+        <section>
             <div className="flex items-center px-2 rounded-lg justify-center">
                 <button className="hidden sm:block rounded-full bg-secondary-content p-2" onClick={scrollPrev}>
                     <FaArrowLeft size={32}/>
@@ -37,7 +36,6 @@ const PlanDniaCarousel = ({planTygodnia, heading}:{planTygodnia:PlanTygodnia, he
                                                  day={el.day} schedule={el.schedule} accentColor={el.accentColor}/>
                             })
                         }
-                        {/*<div className="grow-0 shrink-0 basis-full">Slide 1</div>*/}
                     </div>
                 </div>
                 <button className="hidden sm:block rounded-full bg-secondary-content p-2" onClick={scrollNext}>
@@ -45,7 +43,7 @@ const PlanDniaCarousel = ({planTygodnia, heading}:{planTygodnia:PlanTygodnia, he
                 </button>
             </div>
 
-        </>
+        </section>
 
     );
 };
