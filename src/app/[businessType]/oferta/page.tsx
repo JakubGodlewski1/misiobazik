@@ -3,6 +3,8 @@ import {Accordion, AccordionItem} from "@nextui-org/react";
 import {zajeciaKindergarten, zajeciaNursery} from "@/data/oferta";
 import parse from 'html-react-parser';
 import Jadlospis from "@/app/[businessType]/oferta/Jadlospis";
+import PlanDniaCarousel from "@/app/[businessType]/oferta/PlanDniaCarousel";
+import {planTygodniaMlodszaGrupa, planTygodniaStarszaGrupa} from "@/data/planTygodnia";
 
 
 const OfertaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "przedszkole"}}) => {
@@ -23,6 +25,7 @@ const OfertaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "pr
                 </Accordion>
             </section>
             <Jadlospis/>
+            <PlanDniaCarousel heading="Starsza grupa" planTygodnia={planTygodniaStarszaGrupa}/>
         </>
     );
 };
