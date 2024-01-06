@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    images: {
+        domains: ['firebasestorage.googleapis.com'],
+    },
     async redirects() {
         return [
             {
@@ -7,6 +10,7 @@ const nextConfig = {
                 destination: '/zlobek',
                 permanent: true,
             },
+
         ]
     }
 }

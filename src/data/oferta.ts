@@ -124,8 +124,6 @@ Jego nadrzędnym celem jest wykształcenie u dzieci prawidłowych nawyków żywi
         title:"Wycieczki krajoznawczo-edukacyjne"
     }
 
-
-
 ]
 
 

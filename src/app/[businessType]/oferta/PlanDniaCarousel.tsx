@@ -42,7 +42,6 @@ const PlanDniaCarousel = ({planTygodnia}:{planTygodnia:PlanTygodnia}) => {
                     <FaArrowRight size={32}/>
                 </button>
             </div>
-
         </section>
 
     );

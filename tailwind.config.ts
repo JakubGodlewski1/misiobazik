@@ -35,7 +35,29 @@ const config: Config = {
     },
     darkMode: "class"
   },
-  plugins: [require("daisyui"), nextui()],
+  plugins: [require("daisyui"),
+    nextui({
+      themes: {
+        light: {
+          // ...
+          colors: {
+            "primary": "#EE6725",
+            "secondary": "#FED403",
+            default:"#fff"
+          },
+        },
+        dark: {
+          // ...
+          colors: {
+            "primary": "#EE6725",
+            "secondary": "#FED403",
+            default:"#fff"
+          },
+        },
+      },
+    }),
+
+  ],
   daisyui: {
     themes: [
       {
