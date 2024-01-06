@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import {Inter, Kalam} from 'next/font/google'
+import {Kalam} from 'next/font/google'
 import './../globals.css'
 import Topbar from "@/components/Topbar";
 import Navbar from "@/components/Navbar";
 import {NextUIProvider} from "@nextui-org/react";
 import Providers from "@/Providers";
+import Footer from "@/components/Footer";
 
 const kalam = Kalam({
     weight: ['400', '700'],
@@ -27,11 +28,12 @@ export default function RootLayout({
       <html style={{background: "#F8F2E3"}} lang="pl">
       <body className={kalam.className}>
           <Providers>
+              <Topbar/>
+              <Navbar/>
               <main>
-                  <Topbar/>
-                  <Navbar/>
                   {children}
               </main>
+              <Footer/>
           </Providers>
       </body>
       </html>

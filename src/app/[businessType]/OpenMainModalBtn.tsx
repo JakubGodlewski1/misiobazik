@@ -47,11 +47,11 @@ const OpenMainModalBtn = ({businessType}:{businessType:"zlobek" | "przedszkole"}
                 <div className="w-[1100px] max-w-[90vw] h-[600px] max-h-[90vh] flex">
                     <div className="min-w-[65%] flex flex-col">
                         <div className="p-4">
-                            <h1 className="text-left">Zadzwoń i umów się na spotkanie
+                            <h1 className="text-left text-4xl sm:text-5xl mr-4">Zadzwoń i umów się na spotkanie
                                 w {businessType === "zlobek" ? "żłobku" : "przedszkolu"}</h1>
                             <div className="flex gap-4 mt-auto">
-                                <Image height={60} src={phoneIcon} alt="Ikona telefonu"/>
-                                <span className="text-5xl font-bold text-primary">661 400 422</span>
+                                <Image className="sm:scale-[1.5] scale-[1.2]" src={phoneIcon} alt="Ikona telefonu"/>
+                                <span className="text-3xl sm:text-5xl font-bold text-primary">661 400 422</span>
                             </div>
                         </div>
                         <div
@@ -68,7 +68,7 @@ const OpenMainModalBtn = ({businessType}:{businessType:"zlobek" | "przedszkole"}
                             </ul>
                         </div>
                     </div>
-                    <Image className="object-cover" src={head_teacher} alt="Zdjęcie dyrektorki"/>
+                    <Image className="object-cover hidden md:block" src={head_teacher} alt="Zdjęcie dyrektorki"/>
                    <Image className="absolute top-0 right-0 cursor-pointer p-1" onClick={closeDialog} height={45} width={45} src={closeIcon} alt="Zamknij"/>
                 </div>
             </dialog>

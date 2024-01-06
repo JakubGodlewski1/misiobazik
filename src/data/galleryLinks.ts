@@ -1195,4 +1195,73 @@ export const galleryWyspianskiego = [
     }
 ]
 
-export const galleryKindergarten = []
+export const galleryKindergarten = [
+    {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole1.jpg?alt=media&token=ac55eeed-df49-47ef-9aa3-006e39745c03",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole1.jpg?alt=media&token=ac55eeed-df49-47ef-9aa3-006e39745c03"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole10.jpg?alt=media&token=656f0e79-c5ec-48d6-9e72-4942d90bc533",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole10.jpg?alt=media&token=656f0e79-c5ec-48d6-9e72-4942d90bc533"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole11.jpg?alt=media&token=84646ee4-dc9b-4a2c-9095-6c27d41fd7d9",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole12.jpg?alt=media&token=78818fbd-9993-41fe-9e8d-bd3b8e63e745"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole13.jpg?alt=media&token=f2c9ddc4-a5fd-4baa-ba72-19a7958e968f",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole13.jpg?alt=media&token=f2c9ddc4-a5fd-4baa-ba72-19a7958e968f"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole14.jpg?alt=media&token=6737d3a0-70ac-46ce-bdb5-035064d9e67c",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole14.jpg?alt=media&token=6737d3a0-70ac-46ce-bdb5-035064d9e67c"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole15.jpg?alt=media&token=625c23d4-f1c4-491f-b37e-ba943e63188a",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole15.jpg?alt=media&token=625c23d4-f1c4-491f-b37e-ba943e63188a"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole16.jpg?alt=media&token=60c4ba1a-7960-43f6-a9c4-4be5baac5d63",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole16.jpg?alt=media&token=60c4ba1a-7960-43f6-a9c4-4be5baac5d63"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole2.jpg?alt=media&token=0a56cbc3-787e-41be-b979-aae801110645",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole2.jpg?alt=media&token=0a56cbc3-787e-41be-b979-aae801110645"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole3.jpg?alt=media&token=f11a13d3-06e3-4edf-891a-87f1088ccba4",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole3.jpg?alt=media&token=f11a13d3-06e3-4edf-891a-87f1088ccba4"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole4.jpg?alt=media&token=d3313b2a-7e56-4303-b851-d843e988df09",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole4.jpg?alt=media&token=d3313b2a-7e56-4303-b851-d843e988df09"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole5.jpg?alt=media&token=84bb5d34-8e40-42fd-b09c-a0d8fe75eb78",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole5.jpg?alt=media&token=84bb5d34-8e40-42fd-b09c-a0d8fe75eb78"
+    },
+      {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole6.jpg?alt=media&token=e2ebc012-a442-4bc4-a799-40579a765406",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole6.jpg?alt=media&token=e2ebc012-a442-4bc4-a799-40579a765406"
+    },
+        {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole7.jpg?alt=media&token=51f3e361-83bc-474f-8c20-685f25594daf",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole7.jpg?alt=media&token=51f3e361-83bc-474f-8c20-685f25594daf"
+    },
+        {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole8.jpg?alt=media&token=42adf7f2-62ad-4fda-9ce5-27ee4c61ff89",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole8.jpg?alt=media&token=42adf7f2-62ad-4fda-9ce5-27ee4c61ff89"
+    },
+        {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole9.jpg?alt=media&token=17e0cb12-7281-4c97-b399-967439e8f6d3",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fkindergarten%2FWyspia%C5%84skiego%2Fphotos%2Fprzedszkole9.jpg?alt=media&token=17e0cb12-7281-4c97-b399-967439e8f6d3"
+    },
+         {
+        "original": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fnursery%2FWyspia%C5%84skiego%2Fphotos%2FWyspian%CC%81skiego99.jpg?alt=media&token=3f4023bd-61f5-476d-9313-d0c6411f8450",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/gallery%2Fnursery%2FWyspia%C5%84skiego%2Fphotos%2FWyspian%CC%81skiego99.jpg?alt=media&token=3f4023bd-61f5-476d-9313-d0c6411f8450"
+    },
+
+
+
+
+]

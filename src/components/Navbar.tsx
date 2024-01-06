@@ -44,6 +44,19 @@ const Navbar = () => {
     const pathnamePrefix = pathname.includes("zlobek") ? "/zlobek" : "/przedszkole"
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const isActive = (href:string) => {
+        if (pathname.includes(href) && href !=="/"){
+            return true
+        }
+        if (
+            (pathname.split("/")[pathname.split("/").length-1] ==="zlobek" ||
+            pathname.split("/")[pathname.split("/").length-1] ==="przedszkole" ) &&
+            href === "/"
+        ){
+            return true
+        }
+    }
+
     return (
      <NavbarComponent onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} height="110px" maxWidth="2xl">
          <NavbarContent>
@@ -51,13 +64,14 @@ const Navbar = () => {
                  <Image width={90} height={90} src={logo} alt="Logo"/>
              </NavbarBrand>
          </NavbarContent>
-         <NavbarContent className="hidden lg:flex" justify="end">
+         <NavbarContent className="gap-8 hidden lg:flex" justify="end">
              {
                  items.map(item=>{
                      return <NavbarItem key={item.href}>
                          <Link
                              onClick={()=>setIsMenuOpen(false)}
-                             className="text-xl text-primary font-semibold hover:text-primary/80" href={pathnamePrefix + item.href}>
+                             className={`text-xl text-primary font-semibold hover:text-primary/80 ${isActive(item.href) && "underline"} `}
+                             href={pathnamePrefix + item.href}>
                              {item.label}
                          </Link>
                      </NavbarItem>
@@ -66,13 +80,14 @@ const Navbar = () => {
          <ToggleBusinessButtons closeMenu={()=>setIsMenuOpen(false)}/>
          </NavbarContent>
          <NavbarMenuToggle className="lg:hidden"/>
-         <NavbarMenu>
+         <NavbarMenu className="space-y-3 pt-8">
              {
                  items.map(item=>{
                      return <NavbarMenuItem key={item.label}>
                          <Link
                              onClick={()=>setIsMenuOpen(false)}
-                             className="text-primary text-2xl font-semibold hover:text-primary/80" href={pathnamePrefix + item.href}>
+                             className={`text-primary text-2xl font-semibold hover:text-primary/80 ${isActive(item.href) && "underline"}`}
+                             href={pathnamePrefix + item.href}>
                              {item.label}
                          </Link>
                      </NavbarMenuItem>
@@ -85,6 +100,7 @@ const Navbar = () => {
      </NavbarComponent>
     );
 };
+
 
 export default Navbar;
 
