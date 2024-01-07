@@ -12,7 +12,7 @@ const OfertaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "pr
         <div className="flex flex-col gap-6">
             <section className="max-w-screen-xl w-screen sm:w-[80vw] px-4 mt-12 mx-auto">
                 <h1 className="">Zajęcia</h1>
-                <Accordion className="[&>*>*>ul]:ml-10">
+                <Accordion className="[&_ul]:ml-10">
                     {
                         classes.map(el => {
                             return <AccordionItem key={el.title} title={el.title} aria-label={el.title}>

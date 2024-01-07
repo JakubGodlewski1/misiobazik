@@ -80,7 +80,7 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                 <Cart>
                     <a
                         target="_blank"
-                        className="text-2xl p-4 pt-0"
+                        className="text-2xl p-4 pt-0 hover:underline"
                         href="https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/files%2FRodo.pdf?alt=media&token=e031f921-b46e-4cf4-a0ad-d3dcb0bcdad1"
                         download="Rodo"
                         title="download Rodo PDF"
@@ -94,3 +94,10 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
 };
 
 export default StrefaRodzicaPage;
+
+export async function generateStaticParams(){
+    return [
+        {businessType: "zlobek"},
+        {businessType: "przedszkole"}
+    ]
+}

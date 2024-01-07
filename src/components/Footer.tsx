@@ -20,8 +20,8 @@ const Footer = () => {
 
     return (
         <footer className="bg-primary px-2 py-8  md:p-8 text-secondary">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-                <Image className="hidden md:block" height={200} src={logo_footer} alt="logo stópki"/>
+            <div className="[&_a:hover]:underline grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
+                <Image className="hidden md:block" width={150} height={200} src={logo_footer} alt="logo stópki"/>
                 <div className="hidden sm:flex flex-col text-2xl gap-8 uppercase">
                     <Link href={`/${businessType}/`}>Aktualności</Link>
                     <Link href={`/${businessType}/oferta`}>Oferta</Link>
@@ -38,7 +38,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-6">
                       <div className="flex items-center gap-2">
                         <Image src={phone} alt="phone"/>
-                        <span>661 400 422</span>
+                        <a href="tel:661 400 422">661 400 422</a>
                     </div>
                       <div className="flex items-center gap-2">
                         <Image src={mail} alt="mail"/>
@@ -54,7 +54,7 @@ const Footer = () => {
 export default Footer;
 
 const Email = ({businessType}:{businessType:"zlobek" | "przedszkole"}) => {
-    return businessType === "zlobek" ? <span>{`zlobek@misiobazik.pl`}</span> : <span>{`przedszkole@misiobazik.pl`}</span>
+    return <a href={`mailto:${businessType}@misiobazik.pl`}>{businessType}@misiobazik.pl</a>
 };
 
 const Address = ({businessType}:{businessType:"zlobek" | "przedszkole"}) => {

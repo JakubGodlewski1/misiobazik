@@ -10,7 +10,7 @@ const KadraPage = ({params:{businessType}}:{params:{businessType: "zlobek" | "pr
                     <KadraDescription businessType={businessType}/>
                 </div>
             </section>
-            <section className="px-12 pb-16">
+            <section className="sm:px-12 p-2 pb-16">
                 <EmployeesContainer businessType={businessType}/>
             </section>
         </>
@@ -18,3 +18,10 @@ const KadraPage = ({params:{businessType}}:{params:{businessType: "zlobek" | "pr
 };
 
 export default KadraPage;
+
+export async function generateStaticParams(){
+    return [
+        {businessType: "zlobek"},
+        {businessType: "przedszkole"}
+    ]
+}

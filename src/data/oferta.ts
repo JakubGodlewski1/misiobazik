@@ -74,13 +74,18 @@ export const zajeciaKindergarten:{title:string, content?:string}[] = [
         content:`
             
                 <ul className="flex flex-col gap-2 list-disc mb-6 ml-12">
-                    <li>Zajęcia taneczne</li>
-                    <li>Basen</li>
-                    <li>Dogoterapia</li>
+                    <li>Zajęcia z tańca nowoczesnego,</li>
+                    <li>Basen – pływanie najlepiej rozwija, bo trenuje wszystkie mięśnie,</li>
+                    <li>joga,</li>
+                    <li>karate,</li>
+                    <li>judo,</li>
+                    <li>garncarstwo</li>
                 </ul>
                 <span>
-                    Oferta zajęć dodatkowych przedstawiana jest na zebraniu z rodzicami.. Zawsze istnieje możliwość zmiany dodatkowych zajęć, jeżeli rodzice wyrażą taką wolę. Zajęcia te organizowane są w zależności 
-                       od ilości chętnych i zainteresowanych dzieci i rodziców.
+                Oferta zajęć dodatkowych przedstawiana jest na zebraniu z rodzicami. Wspólnie wybieramy te, które będą 
+                dla dzieci najciekawszą formą aktywności. Zawsze istnieje możliwość zmiany dodatkowych zajęć, jeżeli
+                 rodzice wyrażą taką wolę. Zajęcia te organizowane są w zależności od ilości chętnych
+                  i zainteresowanych dzieci i rodziców
                 </span>
         `
     },

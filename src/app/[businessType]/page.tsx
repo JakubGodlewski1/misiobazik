@@ -20,8 +20,7 @@ const AktualnosciPage = ({params: {businessType}}:{params:{businessType: "zlobek
                     }
                 </div>
                 <div className="h-48 flex flex-col bg-secondary-content justify-center">
-                    <h1 className="mb-4">Nabór do {businessType === "zlobek" ? "żłobka" : "przedszkola"} trwa cały
-                        rok</h1>
+                    <h1 className="text-3xl sm:text-4xl">Nasze {businessType === "zlobek" ? "żłobki" : "przedszkole"} czynne {businessType === "zlobek" ? "są" : "jest"} przez cały rok.</h1>
                     <OpenMainModalBtn businessType={businessType}/>
                 </div>
             </section>
@@ -49,3 +48,10 @@ const PostsWrapper = ({posts}: { posts: Post[]}) => {
         </div>
     );
 };
+
+export async function generateStaticParams(){
+    return [
+        {businessType: "zlobek"},
+        {businessType: "przedszkole"}
+    ]
+}

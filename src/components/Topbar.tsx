@@ -14,7 +14,7 @@ const Topbar = () => {
             </div>
             <div className="flex gap-1.5 items-end">
                 <Image width={20} height={20} src={phone} alt="Ikona telefonu"/>
-                <span className="-mb-1">661 400 422</span>
+                <a className="-mb-1 hover:underline" href="tel:661 400 422">661 400 422</a>
             </div>
             <div className="flex gap-1.5 items-end">
                 <Image width={20} height={20} src={mail} alt="Ikona mail"/>
@@ -28,17 +28,6 @@ export default Topbar;
 
 const Email = () => {
     const pathname = usePathname()
-
-    //pathname includes either zlobek or przedszkole
-    if (pathname.includes("zlobek")){
-            return <span  className="-mb-1">zlobek@misiobazik.pl</span>
-    }
-
-     if (pathname.includes("przedszkole")){
-            return <span  className="-mb-1">przedszkole@misiobazik.pl</span>
-    }
-
-
-
-
+    const businessType = pathname.includes("zlobek") ? "zlobek" : "przedszkole"
+    return <a className="-mb-1 hover:underline" href={`mailto:${businessType}@misiobazik.pl`}>{businessType}@misiobazik.pl</a>
 }

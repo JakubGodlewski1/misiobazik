@@ -10,7 +10,7 @@ const PlanDnia = ({day, schedule, accentColor, className}:Props) => {
     return (
         <div className={`p-2 rounded-xl ${className}`}>
             <h3 className={`text-3xl sm:text-4xl py-2 px-7 rounded-lg self-center mb-4 sm:mb-12 bg-${accentColor}`}>{day}</h3>
-            <div  style={{gridTemplateRows: "repeat(9, min-content)" }} className={`flex sm:grid gap-2 grid-flow-col flex-col`}>
+            <div  style={{gridTemplateRows: "repeat(8, min-content)" }} className={`flex sm:grid gap-2 grid-flow-col flex-col`}>
                 {
                     Object.keys(schedule).map(key=>(
                         <div className="relative p-0.5 flex gap-2" key={key}>

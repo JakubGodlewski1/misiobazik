@@ -43,5 +43,10 @@ export const employees:Employees = {
         }
 
     ],
-    kinderGartenWyspianskiego: []
+    kinderGartenWyspianskiego: [
+        {
+            description: "Nazywam się Magdalena Przybyłko, jestem absolwentką Pedagogiki Wczesnoszkolnej i Przedszkolnej z językiem angielskim oraz Pedagogiki Inkluzywnej. Praca w międzynarodowym przedszkolu w Krakowie pozwoliła mi na zdobycie doświadczenia w pracy z dziećmi w różnym wieku, co daje perspektywę na holistyczny rozwój dziecka i metodę wspierania Go w poznawaniu świata, jak i nauce języka obcego.",
+            imgSrc:"https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/employees%2Fkindergarten%2Fwyspianskiego%2FPHOTO-2024-01-04-13-31-41.jpg?alt=media&token=ce884a3c-8abb-4df0-80d5-8695da3cba28"
+        },
+    ]
 }

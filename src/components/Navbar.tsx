@@ -82,7 +82,7 @@ const Navbar = () => {
          <ToggleBusinessButtons closeMenu={()=>setIsMenuOpen(false)}/>
          </NavbarContent>
          <NavbarMenuToggle className="lg:hidden"/>
-         <NavbarMenu className="space-y-3 pt-8">
+         <NavbarMenu className="gap-3 flex flex-col items-center pt-8">
              {
                  items.map(item=>{
                      return <NavbarMenuItem key={item.label}>

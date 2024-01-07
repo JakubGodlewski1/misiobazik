@@ -11,7 +11,6 @@ const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "p
    const [gallery, setGallery] = useState(galleryZamoyskiego)
 
     useEffect(() => {
-        console.log(nurseryLocation)
         if (businessType==="zlobek"){
             if (nurseryLocation === "wyspianskiego"){
                 setGallery(galleryWyspianskiego)
@@ -47,17 +46,20 @@ const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "p
                 </button>
 
                 {/*carousel*/}
-                <div className={`overflow-hidden shadow-2xl mb-12 sm:mx-3 rounded-lg 
-                ${businessType === "zlobek" ? "max-h-[calc(100vh-250px)] sm:max-h-[calc(100vh-210px)]":"max-h-[calc(100vh-190px)] sm:max-h-[calc(100vh-170px)]"}`} ref={emblaRef}>
-                    <div className="flex w-[90vw] sm:w-[80vw] h-[80svh] sm:h-auto sm:aspect-video">
+                <div
+                    className="shadow-2xl mb-12 sm:mx-3 rounded-lg overflow-hidden w-[90vw] sm:w-[80vw] h-[80svh] sm:aspect-video"
+                    ref={emblaRef}
+                >
+                    <div className="flex w-full h-full">
                         {
                             gallery.map(pic => {
                                 return <div
-                                    className="mr-4 relative w-full h-full grow-0 shrink-0 basis-full cursor-pointer"
+                                    className="mr-4 w-full h-full relative grow-0 shrink-0 basis-full cursor-pointer"
                                     key={pic.original}>
                                     <Image
-                                        className="object-contain rounded-lg object-top"
+                                        className="rounded-lg"
                                         fill={true}
+                                        style={{objectFit:"contain"}}
                                         alt="Image"
                                         src={pic.original}
                                     />

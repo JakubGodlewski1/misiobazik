@@ -38,7 +38,7 @@ const OpenMainModalBtn = ({businessType}:{businessType:"zlobek" | "przedszkole"}
         <>
             <button
                onClick={openDialog}
-                className="mx-auto btn btn-lg btn-primary text-white rounded-full">
+                className="mx-auto btn btn-md sm:btn-lg btn-primary text-white rounded-full">
                 Umów się na obejrzenie placówki
             </button>
 

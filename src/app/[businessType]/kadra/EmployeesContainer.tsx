@@ -4,7 +4,7 @@ import EmployeeCart from "@/app/[businessType]/kadra/EmployeeCart";
 const EmployeesContainer = ({businessType}:{businessType: "zlobek" | "przedszkole"}) => {
 
     return (
-        <div className="flex flex-col gap-16 mt-16 mx-auto">
+        <div className="flex flex-col gap-16 mt-16 mx-auto md:[&>div:nth-child(odd)>p]:order-first">
 
             {/*ZAMOYSIEGO NURSERY*/}
             {
@@ -14,7 +14,7 @@ const EmployeesContainer = ({businessType}:{businessType: "zlobek" | "przedszkol
                     }
                     {
                         employees.nurseryZamoyskiego.map((employee, i)=>{
-                            return <EmployeeCart imgSrc={employee.imgSrc} key={employee.imgSrc} reverse={i%2!==0} description={employee.description}/>
+                            return <EmployeeCart imgSrc={employee.imgSrc} key={employee.imgSrc} description={employee.description}/>
                         })
                     }
              {/*WYSPIAŃSKIEGO NURSERY*/}
@@ -23,10 +23,9 @@ const EmployeesContainer = ({businessType}:{businessType: "zlobek" | "przedszkol
                     }
                     {
                         employees.nurseryWyspianskiego.map((employee, i)=>{
-                            return <EmployeeCart imgSrc={employee.imgSrc} key={employee.imgSrc} reverse={i%2!==0} description={employee.description}/>
+                            return <EmployeeCart imgSrc={employee.imgSrc} key={employee.imgSrc} description={employee.description}/>
                         })
                     }
-
                 </>
             }
 
@@ -41,7 +40,7 @@ const EmployeesContainer = ({businessType}:{businessType: "zlobek" | "przedszkol
                     }
                     {
                         employees.kinderGartenWyspianskiego.map((employee, i)=>{
-                            return <EmployeeCart imgSrc={employee.imgSrc} key={employee.imgSrc} reverse={i%2!==0} description={employee.description}/>
+                            return <EmployeeCart imgSrc={employee.imgSrc} key={employee.imgSrc} description={employee.description}/>
                         })
                     }
                 </>
