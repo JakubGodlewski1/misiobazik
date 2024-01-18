@@ -3,9 +3,9 @@ import kindergarten_hero_phone from "./../../../public/pics/kindergarten_hero_ph
 import nursery_hero_phone from "./../../../public/pics/nursery_hero_phone.jpg"
 import nursery_hero_desktop from "./../../../public/pics/nursery_hero_desktop.jpg"
 import OpenMainModalBtn from "@/app/[businessType]/OpenMainModalBtn";
-import {Post, posts} from "@/data/posts";
+import {Post, kindergartenPosts} from "@/data/kindergartenPosts";
+import {nurseryPosts} from "@/data/nurseryPosts";
 import AktualnosciCart from "@/app/[businessType]/AktualnosciCart";
-
 const AktualnosciPage = ({params: {businessType}}:{params:{businessType: "zlobek" | "przedszkole"}}) => {
 
     return (
@@ -26,7 +26,7 @@ const AktualnosciPage = ({params: {businessType}}:{params:{businessType: "zlobek
             </section>
             <section className="mt-12 mx-auto px-4 max-w-screen-xl mb-12">
                 <h1>Aktualności</h1>
-                {businessType === "przedszkole" && <PostsWrapper posts={posts}/>}
+                <PostsWrapper posts={businessType === "przedszkole" ? kindergartenPosts : nurseryPosts}/>
             </section>
         </>
     );

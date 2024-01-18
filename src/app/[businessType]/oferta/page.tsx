@@ -29,3 +29,10 @@ const OfertaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "pr
 };
 
 export default OfertaPage;
+
+export async function generateStaticParams(){
+    return [
+        {businessType: "zlobek"},
+        {businessType: "przedszkole"}
+    ]
+}

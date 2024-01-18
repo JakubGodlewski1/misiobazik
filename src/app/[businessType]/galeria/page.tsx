@@ -74,7 +74,7 @@ const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "p
                 </button>
             </div>
         </section>
-    );
+    )
 };
 
 export default GaleriaPage;

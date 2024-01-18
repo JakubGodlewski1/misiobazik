@@ -1,5 +1,5 @@
 {
-  "name": "misiobazik2.0",
+  "name": "misiobazik",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
     "embla-carousel-react": "^8.0.0-rc18",
-    "framer-motion": "^10.17.6",
+    "framer-motion": "^10.18.0",
     "html-react-parser": "^5.0.11",
     "next": "14.0.4",
     "react": "^18",
