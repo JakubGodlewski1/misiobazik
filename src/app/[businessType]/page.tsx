@@ -9,8 +9,6 @@ import {EntryCollection, EntrySkeletonType} from "contentful";
 const AktualnosciPage = async ({params: {businessType}}:{params:{businessType: "zlobek" | "przedszkole"}}) => {
     const posts = await contentfulClient.getEntries({content_type: businessType === "zlobek" ? "zlobekPosts" : "przedszkolePosts"})
 
-    console.log(posts)
-
     return (
 
         <>
@@ -44,8 +42,6 @@ const PostsWrapper = ({posts}: { posts:  EntryCollection<EntrySkeletonType, unde
         const {title, text, photo:{fields:{file:{url}}}} = post.fields
         return {title, text, url: "https:"+url}
     }) as {title: string, text: string, url: string}[]
-
-    refactoredPosts.forEach(p=>console.log(p))
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

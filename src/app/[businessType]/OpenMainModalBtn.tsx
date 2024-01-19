@@ -31,10 +31,12 @@ const OpenMainModalBtn = ({businessType}:{businessType:"zlobek" | "przedszkole"}
                 onClick={onOpen}>
                 Umów się na obejrzenie placówki
             </button>
-            <Modal
+            <Modal className="overflow-hidden"
+                backdrop="blur"
+                placement="center"
                 size="5xl"
-                scrollBehavior="outside"
-                classNames={{closeButton:"hidden", body:"p-0 h-full max-h-[80vh] overflow-hidden rounded-xl"}}
+                scrollBehavior="inside"
+                classNames={{closeButton:"hidden", body:"p-0 overflow-hidden rounded-xl"}}
                 isOpen={isOpen}
                 onOpenChange={onOpenChange}
             >
