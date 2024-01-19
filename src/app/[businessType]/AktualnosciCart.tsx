@@ -1,4 +1,4 @@
-import OpenReadMoreModalBtn from "@/app/[businessType]/OpenReadMoreModalBtn";
+import ReadMoreModalBtn from "@/app/[businessType]/ReadMoreModalBtn";
 import Image from "next/image";
 import Markdown from "react-markdown";
 
@@ -13,9 +13,10 @@ const AktualnosciCart = ({imgSrc, text, title}:{imgSrc:string, text: string, tit
             <div className="p-6 flex flex-col gap-4 grow">
                 <h2 className="text-xl text-center font-bold">{title}</h2>
                 <Markdown className="text-center">{text.slice(0, 250)+"..."}</Markdown>
-                <OpenReadMoreModalBtn newsData={{imgSrc, text, title}} classname="underline text-primary font-semibold mt-auto">
-                    Czytaj dalej
-                </OpenReadMoreModalBtn>
+                <ReadMoreModalBtn
+                    newsData={{imgSrc, text, title}}
+                    classname="underline text-primary font-semibold mt-auto"
+                />
             </div>
         </div>
 

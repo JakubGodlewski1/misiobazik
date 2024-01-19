@@ -30,7 +30,6 @@ Dzień wypełniony był wspaniałą zabawą, ale i również nauką. Uczyliśmy 
         `,
         imgSrc:"https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/newsThumbnails%2FZaje%CC%A8cia%20sensoplastyczne%203%20.jpg?alt=media&token=f4c708a7-09ed-47d9-bf77-7989404b8d11"
     },
-
   {
             title: "Dzień jeża",
         text: `10 listopada mają swoje święto kolczaste zwierzątka, bardzo sympatyczne i pożyteczne, dlatego warto chociażby przy tej okazji pomyśleć o nich nieco dłużej.  Jeże towarzyszą nam od najmłodszych lat dzieciństwa w bajkach , wierszach, książeczkach, dlatego Misiobaziki włączyły się w obchody tego nietypowego święta. Poznaliśmy sposób poruszania się, jeży podczas zabawy – „Mały jeż, śmieszny zwierz”, „Kolczasty jeż”. Tworząc wspólnie iglastego przyjaciela, dzieci śpiewały:
@@ -69,14 +68,12 @@ spacerujemy na deptak, chodzimy do kawiarni na lody.
         imgSrc:"https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/newsThumbnails%2Fjesienny%20spacerek.jpg?alt=media&token=5a51a00d-3fa9-4a8c-8398-ea118efc66ab"
     },
   {
-            title: "Krasnoludki poznają kolory",
+       title: "Krasnoludki poznają kolory",
         text: `
   Kolory są nieodłącznym elementem naszego otoczenia. 
 Wpływają na emocje, doznania, rozumienie świata i relacje z innymi.
 Krasnoludki poznają  kolory poprzez zabawę. 
 Dzisiaj skupiliśmy się na kolorze niebieskim, czerwonym, zielonym i żółtym
-
-
         `,
         imgSrc:"https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/newsThumbnails%2Fkrasnoludki%20poznaja%CC%A8%20kolory.jpg?alt=media&token=d08e957a-5a7a-4264-a216-fa26257ef060"
     },
@@ -113,7 +110,6 @@ Klocki kochają wszystkie dzieci Są nieocenionym źródłem satysfakcji, a korz
         text: `Za oknem śnieg, a więc i w naszym żłobku nie mogło go zabraknąć! Krasnoludkom posłużyła do tego mąka ziemniaczana.  Zabawy było co nie miara, a dzięki temu rozwijaliśmy zdolności motoryczne, wyobraźnię oraz kreatywność. Poprzez takie zajęcia uczymy się także pracy w grupie, co jest bardzo ważne!`,
         imgSrc:"https://firebasestorage.googleapis.com/v0/b/misiobazik-711f1.appspot.com/o/newsThumbnails%2Fzaje%CC%A8cia%20sensoplastyczne%204.jpg?alt=media&token=f3aa0108-743b-4ab9-b5a8-12ad87404501"
     },
-
   {
             title: "Radość naszych dzieci jest bezcenna",
         text: `
@@ -125,7 +121,6 @@ Klocki kochają wszystkie dzieci Są nieocenionym źródłem satysfakcji, a korz
   {
             title: "Dzień niepodległosci",
         text: `
-
 Kto ty jesteś? Polak mały.
 Jaki znak twój?  - Orzeł biały.
 Gdzie ty mieszkasz? - Między swemi.

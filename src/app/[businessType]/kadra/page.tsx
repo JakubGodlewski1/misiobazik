@@ -1,7 +1,8 @@
 import KadraDescription from "@/app/[businessType]/kadra/KadraDescription";
 import EmployeesContainer from "@/app/[businessType]/kadra/EmployeesContainer";
 
-const KadraPage = ({params:{businessType}}:{params:{businessType: "zlobek" | "przedszkole"}}) => {
+const KadraPage = async ({params:{businessType}}:{params:{businessType: "zlobek" | "przedszkole"}}) => {
+
     return (
         <>
             <section className="bg-secondary-content pt-12">

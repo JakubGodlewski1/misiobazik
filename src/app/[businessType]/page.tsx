@@ -3,12 +3,16 @@ import kindergarten_hero_phone from "./../../../public/pics/kindergarten_hero_ph
 import nursery_hero_phone from "./../../../public/pics/nursery_hero_phone.jpg"
 import nursery_hero_desktop from "./../../../public/pics/nursery_hero_desktop.jpg"
 import OpenMainModalBtn from "@/app/[businessType]/OpenMainModalBtn";
-import {Post, kindergartenPosts} from "@/data/kindergartenPosts";
-import {nurseryPosts} from "@/data/nurseryPosts";
 import AktualnosciCart from "@/app/[businessType]/AktualnosciCart";
-const AktualnosciPage = ({params: {businessType}}:{params:{businessType: "zlobek" | "przedszkole"}}) => {
+import {contentfulClient} from "@/clients/contentful";
+import {EntryCollection, EntrySkeletonType} from "contentful";
+const AktualnosciPage = async ({params: {businessType}}:{params:{businessType: "zlobek" | "przedszkole"}}) => {
+    const posts = await contentfulClient.getEntries({content_type: businessType === "zlobek" ? "zlobekPosts" : "przedszkolePosts"})
+
+    console.log(posts)
 
     return (
+
         <>
             <section className="h-[calc(100svh-142px)] flex flex-col">
                 <div className="flex-grow relative">
@@ -26,7 +30,7 @@ const AktualnosciPage = ({params: {businessType}}:{params:{businessType: "zlobek
             </section>
             <section className="mt-12 mx-auto px-4 max-w-screen-xl mb-12">
                 <h1>Aktualności</h1>
-                <PostsWrapper posts={businessType === "przedszkole" ? kindergartenPosts : nurseryPosts}/>
+                <PostsWrapper posts={posts}/>
             </section>
         </>
     );
@@ -34,13 +38,21 @@ const AktualnosciPage = ({params: {businessType}}:{params:{businessType: "zlobek
 
 export default AktualnosciPage;
 
-const PostsWrapper = ({posts}: { posts: Post[]}) => {
+const PostsWrapper = ({posts}: { posts:  EntryCollection<EntrySkeletonType, undefined, string>}) => {
+    const refactoredPosts = posts.items.map(post=>{
+        // @ts-ignore
+        const {title, text, photo:{fields:{file:{url}}}} = post.fields
+        return {title, text, url: "https:"+url}
+    }) as {title: string, text: string, url: string}[]
+
+    refactoredPosts.forEach(p=>console.log(p))
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {posts && posts.length > 0 && posts.map((post) => (
+            {refactoredPosts && refactoredPosts.length > 0 && refactoredPosts.map((post) => (
                 <AktualnosciCart
                     key={post.title}
-                    imgSrc={post.imgSrc}
+                    imgSrc={post.url}
                     text={post.text}
                     title={post.title}
                 />

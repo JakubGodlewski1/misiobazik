@@ -4,6 +4,7 @@ import {zajeciaKindergarten, zajeciaNursery} from "@/data/oferta";
 import parse from 'html-react-parser';
 import Jadlospis from "@/app/[businessType]/oferta/Jadlospis";
 import PlanDniaCarousel from "@/app/[businessType]/oferta/PlanDniaCarousel";
+import {contentfulClient} from "@/clients/contentful";
 
 const OfertaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "przedszkole"}}) => {
     const classes = businessType === "zlobek" ? zajeciaNursery : zajeciaKindergarten
@@ -24,6 +25,7 @@ const OfertaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "pr
             </section>
             <Jadlospis/>
             <PlanDniaCarousel/>
+
         </div>
     );
 };

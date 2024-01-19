@@ -1,35 +1,29 @@
 'use client'
-import {ReactNode,  useRef} from "react";
 
-
-import ClientOnlyPortal from "@/components/ClientOnlyPortal";
-import ReadMoreModal from "@/app/[businessType]/ReadMoreModal";
 import {Modal, ModalBody, ModalContent, ModalHeader, useDisclosure} from "@nextui-org/react";
 import Image from "next/image";
 import close_orange from "../../../public/icons/close_orange.svg";
 import Markdown from "react-markdown";
 
-
 type Props = {
     newsData:{imgSrc:string, text: string, title:string},
-    children:ReactNode,
     classname:string
 }
 
-const OpenReadMoreModalBtn = ({newsData:{imgSrc, text, title}, children, classname}:Props) => {
+const ReadMoreModalBtn = ({newsData:{imgSrc, text, title}, classname}:Props) => {
     const {isOpen, onOpen, onOpenChange, onClose} = useDisclosure();
-
-
 
     return (
         <>
             <button onClick={onOpen} className={classname}>
-                {children}
+                Czytaj dalej
             </button>
             <Modal
+                backdrop="blur"
+                className="overflow-hidden"
+                classNames={{closeButton: "hidden", body:"bg-secondary-content p-0 overflow-hidden rounded-xl"}}
                 size="xl"
                 scrollBehavior="inside"
-                className="bg-secondary-content p-0 overflow-hidden"
                 isOpen={isOpen}
                 onOpenChange={onOpenChange}
             >
@@ -42,7 +36,7 @@ const OpenReadMoreModalBtn = ({newsData:{imgSrc, text, title}, children, classna
                           alt="zamknij stronę"
                       />
                     <ModalBody className="p-0 max-w-full overflow-y-scroll">
-                            <div className="h-[30vh] relative">
+                            <div className="w-full min-h-[30vh] relative">
                                 <Image fill={true} className="object-cover" src={imgSrc} alt="Zdjęcie w tle"/>
                             </div>
                             <div className="p-2 pt-8 sm:p-8 text-center sm:text-left">
@@ -56,4 +50,4 @@ const OpenReadMoreModalBtn = ({newsData:{imgSrc, text, title}, children, classna
     );
 };
 
-export default OpenReadMoreModalBtn;
+export default ReadMoreModalBtn;

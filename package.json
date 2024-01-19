@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
+    "contentful": "^10.6.16",
     "embla-carousel-react": "^8.0.0-rc18",
     "framer-motion": "^10.18.0",
     "html-react-parser": "^5.0.11",
