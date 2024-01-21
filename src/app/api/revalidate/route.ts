@@ -9,5 +9,7 @@ export async function GET(req:NextRequest, res:NextResponse) {
    }
 
    revalidatePath("/", "layout")
+   revalidatePath("/zlobek", "page")
+   revalidatePath("/przedszkole", "page")
    return NextResponse.json("Dane zostały poprawnie odświeżone")
 }
