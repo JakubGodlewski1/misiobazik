@@ -25,8 +25,8 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                                 rodzica i dyrektora. Jest to opłata zapewniająca miejsce w placówce.</p>
                         </Cart>
                         <Cart title="Opieka doraźna">
-                            <p><b>Już od dwóch godzin dziennie – 50,00zł za każdą rozpoczętą godzinę.</b> Opieka w
-                                sobotę lub niedzielę –<b>60 zł za godzinę.</b></p>
+                            <p><b>Już od dwóch godzin dziennie – 40,00zł za każdą rozpoczętą godzinę.</b> Opieka w
+                                sobotę lub niedzielę –<b>50 zł za godzinę.</b></p>
                         </Cart>
                     </div>
                 </div>
@@ -36,11 +36,8 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                     <h2>Ważne informacje</h2>
                     {
                         businessType === "przedszkole" && <p>
-                            Rekrutacja do Anglojęzycznego Niepublicznego Punktu Przedszkolnego „Teddy Bazik” trwa przez cały
-                            rok
-                            do wyczerpania miejsc. Przedszkole przyjmuje dzieci od 2 do 5 lat, które samodzielnie
-                            sygnalizują
-                            potrzeby fizjologiczne i nie korzystają z pieluszki.
+                            Rekrutacja do Anglojęzycznego Niepublicznego Punktu Przedszkolnego „Teddy Bazik” trwa przez cały rok do wyczerpania miejsc.
+                            Przedszkole przyjmuje dzieci od 2,5 lat, które samodzielnie sygnalizują potrzeby fizjologiczne i nie korzystają z pieluszki.
                         </p>
                     }
                     <span className="font-bold text-lg block mt-12 mb-2">Przy zapisie dziecka należy dostarczyć następujące dokumenty:</span>
@@ -48,9 +45,11 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                         <li>umowę zaakceptowaną czytelnym podpisem rodzica/prawnego opiekuna,</li>
                         <li>wypełnioną kartę zgłoszenia dziecka,</li>
                         <li>opłatę wpisową,</li>
-                        <li>zaświadczenie od lekarza pediatry, że nie ma przeciwskazań, aby dziecko chodziło do
-                            żłobka.
-                        </li>
+                        {businessType === "zlobek" &&
+                            <li>zaświadczenie od lekarza pediatry, że nie ma przeciwskazań, aby dziecko chodziło do
+                                żłobka.
+                            </li>}
+
                     </ul>
                     <span className="font-bold text-lg block mt-12 mb-2">Prosimy o zapewnienie dziecku podczas pobytu w placówce:</span>
                     <ul className="text-start list-disc ml-6">
@@ -58,7 +57,7 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                         <li>papci lub skarpetek antypoślizgowych,</li>
                         <li>piżamki,</li>
                         <li>kubeczka, szczoteczki do zębów, pasty,</li>
-                        <li>pieluszki jednorazowe,</li>
+                        {businessType === "zlobek" && <li>pieluszki jednorazowe,</li>}
                         <li>nawilżających chusteczek.</li>
                     </ul>
                 </div>
