@@ -1,6 +1,6 @@
 'use client'
 import useEmblaCarousel from "embla-carousel-react";
-import {ChangeEvent, useCallback, useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
 import {galleryZamoyskiego, galleryWyspianskiego, galleryKindergarten} from "@/data/galleryLinks";
 import Image from "next/image";
@@ -9,6 +9,7 @@ const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "p
     const [emblaRef, emblaApi] = useEmblaCarousel()
     const [nurseryLocation, setNurseryLocation] = useState<"zamoyskiego" | "wyspianskiego">("zamoyskiego")
    const [gallery, setGallery] = useState(galleryZamoyskiego)
+
 
     useEffect(() => {
         if (businessType==="zlobek"){
@@ -29,6 +30,8 @@ const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "p
         if (emblaApi) emblaApi.scrollNext()
     }, [emblaApi])
 
+
+
     return (
         <section>
             {
@@ -40,7 +43,7 @@ const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "p
                     <option value="wyspianskiego">Wyspiańskiego</option>
                 </select>
             }
-            <div className="flex items-center px-2 rounded-lg justify-center mt-4">
+            <div className="flex items-center px-2 rounded-lg justify-center mt- 4">
                 <button className="hidden sm:block rounded-full bg-secondary-content p-2" onClick={scrollPrev}>
                     <FaArrowLeft size={32}/>
                 </button>
