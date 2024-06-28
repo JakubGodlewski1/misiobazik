@@ -1,26 +1,12 @@
 'use client'
 import useEmblaCarousel from "embla-carousel-react";
-import {useCallback, useEffect, useState} from "react";
+import {useCallback} from "react";
 import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
-import {galleryZamoyskiego, galleryWyspianskiego, galleryKindergarten} from "@/data/galleryLinks";
+import {galleryZamoyskiego} from "@/data/galleryLinks";
 import Image from "next/image";
 
-const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "przedszkole"}}) => {
+const GaleriaPage = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel()
-    const [nurseryLocation, setNurseryLocation] = useState<"zamoyskiego" | "wyspianskiego">("zamoyskiego")
-   const [gallery, setGallery] = useState(galleryZamoyskiego)
-
-
-    useEffect(() => {
-        if (businessType==="zlobek"){
-            if (nurseryLocation === "wyspianskiego"){
-                setGallery(galleryWyspianskiego)
-            }else setGallery(galleryZamoyskiego)
-        }
-        if (businessType ==="przedszkole"){
-           setGallery(galleryKindergarten)
-        }
-    }, [businessType, nurseryLocation]);
 
     const scrollPrev = useCallback(() => {
         if (emblaApi) emblaApi.scrollPrev()
@@ -34,15 +20,6 @@ const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "p
 
     return (
         <section>
-            {
-                businessType === "zlobek" &&
-                <select
-                    onChange={(e)=>setNurseryLocation(e.target.value as "zamoyskiego" | "wyspianskiego")}
-                    className="select select-md shadow-xl w-full max-w-xs mx-auto block text-lg mt-4 bg-secondary-content text-black">
-                    <option value="zamoyskiego">Zamoyskiego</option>
-                    <option value="wyspianskiego">Wyspiańskiego</option>
-                </select>
-            }
             <div className="flex items-center px-2 rounded-lg justify-center mt- 4">
                 <button className="hidden sm:block rounded-full bg-secondary-content p-2" onClick={scrollPrev}>
                     <FaArrowLeft size={32}/>
@@ -55,7 +32,7 @@ const GaleriaPage = ({params:{businessType}}:{params:{businessType:"zlobek" | "p
                 >
                     <div className="flex w-full h-full">
                         {
-                            gallery.map(pic => {
+                            galleryZamoyskiego.map(pic => {
                                 return <div
                                     className="mr-4 w-full h-full relative grow-0 shrink-0 basis-full cursor-pointer"
                                     key={pic.original}>

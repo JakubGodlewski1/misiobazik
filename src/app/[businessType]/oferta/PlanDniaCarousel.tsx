@@ -46,10 +46,8 @@ const PlanDniaCarousel = () => {
             <select
                 onChange={handleGroupChange}
                 className="select select-md shadow-xl w-full max-w-xs mx-auto block text-lg mt-4 bg-secondary-content text-black">
-                <option value="zamoyskiego_younger">Młodsza grupa - Zamoyskiego</option>
-                <option value="zamoyskiego_older">Starsza grupa - Zamoyskiego</option>
-                <option value="wyspianskiego_younger">Młodsza grupa - Wyspiańskiego</option>
-                <option value="wyspianskiego_older">Starsza grupa - Wyspiańskiego</option>
+                <option value="zamoyskiego_younger">Młodsza grupa</option>
+                <option value="zamoyskiego_older">Starsza grupa</option>
             </select>
             <div className="flex items-center px-2 rounded-lg justify-center">
                 <button className="hidden sm:block rounded-full bg-secondary-content p-2" onClick={scrollPrev}>

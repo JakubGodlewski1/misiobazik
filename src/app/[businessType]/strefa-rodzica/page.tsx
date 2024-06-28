@@ -10,7 +10,7 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                         <Cart title="Czesne">
                             {
                                 businessType === "zlobek" ?
-                                    <p><b>Czesne wynosi 700 zł miesięcznie</b> bez względu na ilość godzin zaraz po
+                                    <p><b>Czesne wynosi 800 zł miesięcznie</b> bez względu na ilość godzin zaraz po
                                         złożeniu przez rodzica wniosku do ZUS o 400 zł (zgodnie z Ustawą o rodzinnym
                                         kapitale opiekuńczym - Dz. U. z 2021 r., poz. 2270). </p> :
                                     <p>Czesne wynosi 800zł miesięcznie bez względu na ilość godzin.</p>
@@ -68,7 +68,7 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                     <h2>Dotacje</h2>
                     <div className="max-w-[400px] mx-auto">
                         <Cart>
-                            <p><b>W roku 2023</b>, jak i również w latach poprzednich, otrzymaliśmy dofinansowanie z
+                            <p><b>W roku 2024</b>, jak i również w latach poprzednich, otrzymaliśmy dofinansowanie z
                                 Urzędu Miasta Zielona Góra w kwocie 270zł na dziecko.</p>
                         </Cart>
                     </div>

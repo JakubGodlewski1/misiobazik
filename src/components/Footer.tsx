@@ -60,14 +60,6 @@ const Email = ({businessType}:{businessType:"zlobek" | "przedszkole"}) => {
 const Address = ({businessType}:{businessType:"zlobek" | "przedszkole"}) => {
     return (
         <>
-            <div className="flex items-center gap-2 ml-1">
-                <Image src={location} alt="location"/>
-                <span>
-                            Wyspiańskiego 13<br/>
-                            65-036 Zielona Góra <br/>
-                            Godziny otwarcia: 6.30 - 17:00
-                        </span>
-            </div>
             {businessType === "zlobek" &&
                 <div className="flex items-center gap-2 ml-1">
                     <Image src={location} alt="location"/>

@@ -1,4 +1,3 @@
-
 import EmployeeCart from "@/app/[businessType]/kadra/EmployeeCart";
 import {contentfulClient} from "@/clients/contentful";
 
@@ -36,45 +35,10 @@ const EmployeesContainer = async ({businessType}:{businessType: "zlobek" | "prze
 
     return (
         <div className="flex flex-col gap-16 mt-16 mx-auto md:[&>div:nth-child(odd)>p]:order-first">
-
-            {/*ZAMOYSIEGO NURSERY*/}
             {
-                businessType === "zlobek" && <>
-                    {
-                        nurseryEmployees.zamoyskiego.length > 0 && <h2 style={{marginBottom:"-40px"}}>Zamoyskiego</h2>
-                    }
-                    {
-                        nurseryEmployees.zamoyskiego.map((employee, i)=>{
-                            return <EmployeeCart imgSrc={employee.url} key={employee.url} description={employee.description}/>
-                        })
-                    }
-             {/*WYSPIAŃSKIEGO NURSERY*/}
-                    {
-                        nurseryEmployees.wyspianskiego.length > 0 &&  <h2 style={{marginBottom:"-40px"}}  className="subheading">Wyspiańskiego</h2>
-                    }
-                    {
-                        nurseryEmployees.wyspianskiego.map((employee, i)=>{
-                            return <EmployeeCart imgSrc={employee.url} key={employee.url} description={employee.description}/>
-                        })
-                    }
-                </>
-            }
-
-
-
-            {/*WYSPIAŃŚKIEGO KINDERGARTEN*/}
-
-            {
-                businessType === "przedszkole" && <>
-                    {
-                        kinderGartenEmployees.length > 0 &&  <h2 style={{marginBottom:"-40px"}}>Wyspiańskiego</h2>
-                    }
-                    {
-                        kinderGartenEmployees.map((employee, i)=>{
-                            return <EmployeeCart imgSrc={employee.url} key={employee.description} description={employee.description}/>
-                        })
-                    }
-                </>
+                [...nurseryEmployees.zamoyskiego,  ...nurseryEmployees.wyspianskiego].map((employee, i)=>{
+                    return <EmployeeCart imgSrc={employee.url} key={employee.url} description={employee.description}/>
+                })
             }
         </div>
     );

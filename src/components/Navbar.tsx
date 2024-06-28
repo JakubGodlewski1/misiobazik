@@ -79,7 +79,6 @@ const Navbar = () => {
                      </NavbarItem>
                  })
              }
-         <ToggleBusinessButtons closeMenu={()=>setIsMenuOpen(false)}/>
          </NavbarContent>
          <NavbarMenuToggle className="lg:hidden"/>
          <NavbarMenu className="gap-3 flex flex-col items-center pt-8">
@@ -95,9 +94,6 @@ const Navbar = () => {
                      </NavbarMenuItem>
                  })
              }
-             <NavbarMenuItem>
-                 <ToggleBusinessButtons closeMenu={()=>setIsMenuOpen(false)}/>
-             </NavbarMenuItem>
          </NavbarMenu>
      </NavbarComponent>
     );
@@ -105,26 +101,3 @@ const Navbar = () => {
 
 
 export default Navbar;
-
-
-const ToggleBusinessButtons = ({closeMenu}:{closeMenu:()=>void}) => {
-    const pathname = usePathname()
-    const active = `shadow-2xl`
-    const inactive = 'bg-primary/80 scale-90'
-    const businessType = pathname.includes("zlobek") ? "zlobek" : "przedszkole"
-
-    return <ButtonGroup>
-        <Link
-            onClick={closeMenu}
-            className={`btn text-lg rounded-r-none btn-primary text-accent ${businessType === "zlobek" ? active : inactive}`}
-            href={replaceWord(pathname, "przedszkole", "zlobek")}>
-           Żłobek
-        </Link>
-        <Link
-            onClick={closeMenu}
-            className={`btn text-lg rounded-l-none btn-primary text-accent ${businessType === "przedszkole" ? active : inactive}`}
-            href={replaceWord(pathname, "zlobek", "przedszkole")}>
-           Przedszkole
-        </Link>
-    </ButtonGroup>
-}
