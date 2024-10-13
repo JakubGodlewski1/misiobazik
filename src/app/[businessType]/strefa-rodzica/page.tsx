@@ -11,8 +11,8 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                             {
                                 businessType === "zlobek" ?
                                     <p>
-                                        <b>0zł miesięcznie</b> - czesne oraz zajęcia dodatkowe (pod warunkiem złożenia do ZUS wniosku &quot;Aktywnie w żłobku&quot;). <br/>
-                                        1200zł miesięcznie - czesne I zajęcia dodatkowe, bez złożonego wniosku &quot;Aktywnie w żłobku&quot;.
+                                        <b>0 zł miesięcznie</b> - czesne oraz zajęcia dodatkowe, pod warunkiem złożenia do ZUS wniosku &quot;Aktywnie w żłobku&quot;. <br/>
+                                        1200 zł miesięcznie - czesne I zajęcia dodatkowe, bez złożonego wniosku &quot;Aktywnie w żłobku&quot;.
                                     </p>
                                     // <p>
                                     //     <b>Czesne wynosi 800 zł miesięcznie</b> bez względu na ilość godzin zaraz po
