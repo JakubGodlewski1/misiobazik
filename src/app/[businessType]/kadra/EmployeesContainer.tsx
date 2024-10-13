@@ -1,5 +1,6 @@
 import EmployeeCart from "@/app/[businessType]/kadra/EmployeeCart";
 import {contentfulClient} from "@/clients/contentful";
+import * as util from "node:util";
 
 const EmployeesContainer = async ({businessType}:{businessType: "zlobek" | "przedszkole"}) => {
     const kinderGartenEmployees:{url:string, description: string}[] = []
@@ -28,8 +29,12 @@ const EmployeesContainer = async ({businessType}:{businessType: "zlobek" | "prze
         //add employees from zamoyskiego
         const zamoyskiegoEmployees = await contentfulClient.getEntries({content_type:"zlobekZamoyskiegoKadra"})
         zamoyskiegoEmployees.items.forEach(employee=>{
-            // @ts-ignore
-            nurseryEmployees.zamoyskiego.push({description: employee.fields.description, url: "https:"+employee.fields.photo.fields.file.url})
+            console.log(util.inspect(employee, {depth:4}))
+      // @ts-ignore
+            const picUrl = employee.fields.photo?.fields?.file?.url
+            if (picUrl){
+            nurseryEmployees.zamoyskiego.push({description: employee.fields.description as string, url: "https:"+picUrl})
+      }
         })
     }
 
