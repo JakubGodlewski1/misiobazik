@@ -10,9 +10,16 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                         <Cart title="Czesne">
                             {
                                 businessType === "zlobek" ?
-                                    <p><b>Czesne wynosi 800 zł miesięcznie</b> bez względu na ilość godzin zaraz po
-                                        złożeniu przez rodzica wniosku do ZUS o 400 zł (zgodnie z Ustawą o rodzinnym
-                                        kapitale opiekuńczym - Dz. U. z 2021 r., poz. 2270). </p> :
+                                    <p>
+                                        <b>0zł miesięcznie</b> - czesne oraz zajęcia dodatkowe (pod warunkiem złożenia do ZUS wniosku &quot;Aktywnie w żłobku&quot;). <br/>
+                                        1200zł miesięcznie - czesne I zajęcia dodatkowe, bez złożonego wniosku &quot;Aktywnie w żłobku&quot;.
+                                    </p>
+                                    // <p>
+                                    //     <b>Czesne wynosi 800 zł miesięcznie</b> bez względu na ilość godzin zaraz po
+                                    //     złożeniu przez rodzica wniosku do ZUS o 400 zł (zgodnie z Ustawą o rodzinnym
+                                    //     kapitale opiekuńczym - Dz. U. z 2021 r., poz. 2270).
+                                    // </p>
+                                    :
                                     <p>Czesne wynosi 800zł miesięcznie bez względu na ilość godzin.</p>
                             }
                         </Cart>

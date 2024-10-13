@@ -1,0 +1,16 @@
+services:
+  app:
+    ports:
+    - "5005:3000"
+    platform: linux/amd64
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        CONTENTFUL_SPACE: ${CONTENTFUL_SPACE}
+        CONTENTFUL_ENVIRONMENT: ${CONTENTFUL_ENVIRONMENT}
+        CONTENTFUL_ACCESS_TOKEN: ${CONTENTFUL_ACCESS_TOKEN}
+        NEXT_REVALIDATION_TOKEN: ${NEXT_REVALIDATION_TOKEN}
+    env_file:
+      - .env #used during runtime
