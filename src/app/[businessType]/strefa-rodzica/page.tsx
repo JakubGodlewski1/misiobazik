@@ -11,14 +11,10 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                             {
                                 businessType === "zlobek" ?
                                     <p>
-                                        <b>0 zł miesięcznie</b> - czesne oraz zajęcia dodatkowe, pod warunkiem złożenia do ZUS wniosku &quot;Aktywnie w żłobku&quot;. <br/>
-                                        1200 zł miesięcznie - czesne I zajęcia dodatkowe, bez złożonego wniosku &quot;Aktywnie w żłobku&quot;.
+                                        <b>450zl miesięcznie</b> - zaraz po złożeniu wniosku do ZUS o świadczenie
+                                        &quot;Aktywnie w żłobku&quot;.
+                                        Opłata zawiera opiekę, edukację i zajęcia dodatkowe.
                                     </p>
-                                    // <p>
-                                    //     <b>Czesne wynosi 800 zł miesięcznie</b> bez względu na ilość godzin zaraz po
-                                    //     złożeniu przez rodzica wniosku do ZUS o 400 zł (zgodnie z Ustawą o rodzinnym
-                                    //     kapitale opiekuńczym - Dz. U. z 2021 r., poz. 2270).
-                                    // </p>
                                     :
                                     <p>Czesne wynosi 800zł miesięcznie bez względu na ilość godzin.</p>
                             }
@@ -69,18 +65,6 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                     </ul>
                 </div>
             </section>
-            {
-                businessType === "zlobek" &&
-                <section  className="py-12 px-6">
-                    <h2>Dotacje</h2>
-                    <div className="max-w-[400px] mx-auto">
-                        <Cart>
-                            <p><b>W roku 2024</b>, jak i również w latach poprzednich, otrzymaliśmy dofinansowanie z
-                                Urzędu Miasta Zielona Góra w kwocie 270zł na dziecko.</p>
-                        </Cart>
-                    </div>
-                </section>
-            }
             <section className="py-12 px-6">
                 <h2>Dokumenty</h2>
                 <Cart>
