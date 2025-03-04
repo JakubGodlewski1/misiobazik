@@ -1,4 +1,3 @@
-import Jadlospis from "@/app/[businessType]/oferta/Jadlospis";
 import PlanDniaCarousel from "@/app/[businessType]/oferta/PlanDniaCarousel";
 import {contentfulClient} from "@/clients/contentful";
 import Zajecia from "@/app/[businessType]/oferta/Zajecia";
@@ -14,7 +13,6 @@ const OfertaPage = async ({params:{businessType}}:{params:{businessType:"zlobek"
     return (
         <div className="flex flex-col gap-6">
             <Zajecia convertedClasses={convertedClasses}/>
-            <Jadlospis/>
             <PlanDniaCarousel/>
         </div>
     );

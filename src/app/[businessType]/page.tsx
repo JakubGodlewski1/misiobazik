@@ -22,7 +22,11 @@ const AktualnosciPage = async ({params: {businessType}}:{params:{businessType: "
                     }
                 </div>
                 <div className="h-48 flex flex-col bg-secondary-content justify-center">
-                    <h1 className="text-3xl sm:text-4xl">Nasz żłobek czynny jest przez cały rok!</h1>
+                    <div className="mx-auto">
+                        <h1 className="text-xl sm:text-4xl">Dziecko jest chodzącym cudem, jedynym, wyjątkowym i niezastąpionym. </h1>
+                        <h3 className="text-right text-lg text-primary mr-4">- Phil Bosmans</h3>
+                    </div>
+
                     <OpenMainModalBtn businessType={businessType}/>
                 </div>
             </section>

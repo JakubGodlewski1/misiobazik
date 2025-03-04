@@ -20,7 +20,7 @@ const StrefaRodzicaPage = ({params:{businessType}}:{params:{businessType: "zlobe
                             }
                         </Cart>
                         <Cart title="Całodzienne wyżywienie dziecka">
-                            <p><b>16 zł</b> - I śniadanie, II śniadanie, zupa, II danie, podwieczorek, napoje gorące i
+                            <p><b>17 zł</b> - I śniadanie, II śniadanie, zupa, II danie, podwieczorek, napoje gorące i
                                 zimne (herbata ziołowa, owocowa, woda, kompot).</p>
                         </Cart>
                         <Cart title="Wpisowe">
